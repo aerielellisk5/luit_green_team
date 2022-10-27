@@ -9,3 +9,5 @@ print("Hello, World") # this is a trailing comment
 my_str = "This is a simple string"
 
 print(my_str)
+
+# NAME is AGE YEARS old and loves the color COLOR
