@@ -18,15 +18,15 @@ import string
 count = 0
 list = []
 
-# number_of_ec2_instance = int(input("How many EC2 instance would you like names for? "))
-# department_for_instances = input("Which department are these instances for? ")
+number_of_ec2_instance = int(input("How many EC2 instance would you like names for? "))
+department_for_instances = input("Which department are these instances for? ")
 
-# while count <= (number_of_ec2_instance):
-#     special_name = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6))
-#     count += 1
-#     list.append({special_name, department_for_instances})
+while count <= (number_of_ec2_instance):
+    special_name = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6))
+    count += 1
+    list.append({special_name, department_for_instances})
     
-# print(list)
+print(list)
 
 #Advanced
 departments = ["Marketing", "Accounting", "Finops"]
