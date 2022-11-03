@@ -19,27 +19,44 @@ count = 0
 list = []
 
 number_of_ec2_instance = int(input("How many EC2 instance would you like names for? "))
-department_for_instances = input("Which department are these instances for? ")
+# department_for_instances = input("Which department are these instances for? ")
 
-while count <= (number_of_ec2_instance):
-    special_name = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6))
-    count += 1
-    list.append({special_name, department_for_instances})
+# while count <= (number_of_ec2_instance):
+#     special_name = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6))
+#     count += 1
+#     list.append({special_name, department_for_instances})
     
-print(list)
+# print(list)
 
 #Advanced
 departments = ["Marketing", "Accounting", "Finops"]
 
 chosen_department = (input("Which department are these instances for? Marketing, Accounting, or Finops? ")).capitalize()
+
+# match = departments.index(chosen_department)
+print(chosen_department)
+# print(department)
+
+if chosen_department in departments:
+    print(chosen_department)
+    print("yessss this is right!")
+else:
+    print("nope this is wrong")
     
-for department in departments:
-    # print(department)
-    if chosen_department == department:
-        print("this is right")
-    else:
-        print("We made it to the next place")
-   
+    
+
+
+
+# for department in departments:
+#     print(department)
+#     print(chosen_department)
+    
+#     if chosen_department == department:
+#         print("We made it!")
+#     else:
+#         print("this is not the right department!")
+        
+        
 
 
 
