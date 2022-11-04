@@ -13,12 +13,12 @@
 
 
 # Basic
-import random
-import string
-count = 0
-list = []
+# import random
+# import string
+# count = 0
+# list = []
 
-number_of_ec2_instance = int(input("How many EC2 instance would you like names for? "))
+# number_of_ec2_instance = int(input("How many EC2 instance would you like names for? "))
 # department_for_instances = input("Which department are these instances for? ")
 
 # while count <= (number_of_ec2_instance):
@@ -28,24 +28,65 @@ number_of_ec2_instance = int(input("How many EC2 instance would you like names f
     
 # print(list)
 
-#Advanced
+# Advanced
+import random
+import string
+count = 0
+list = []
+
+number_of_ec2_instance = int(input("How many EC2 instance would you like names for? "))
+chosen_department = input("Which department are these instances for? Marketing, Accounting, or Finops? ").capitalize()
+
 departments = ["Marketing", "Accounting", "Finops"]
-
-chosen_department = (input("Which department are these instances for? Marketing, Accounting, or Finops? ")).capitalize()
-
 # match = departments.index(chosen_department)
-print(chosen_department)
+
 # print(department)
 
 if chosen_department in departments:
-    print(chosen_department)
-    print("yessss this is right!")
+    while count < (number_of_ec2_instance):
+        special_name = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(9))
+        count += 1
+        list.append({special_name, chosen_department})
+    print('yess')
 else:
     print("nope this is wrong")
     
+print(list)
+
+
+#Complex
+
+# import random
+# import string
+# # count = 0
+# # list = []
+
+# def build_ec2_instance(number_of_ec2_instance, chosen_department):
+#     count = 0
+#     list = []
+#     # number_of_ec2_instance = int(input("How many EC2 instance would you like names for? "))
+#     # chosen_department = (input("Which department are these instances for? Marketing, Accounting, or Finops? ")).capitalize()
+#     number_of_ec2_instance = number_of_ec2_instance
+#     chosen_department = chosen_department.capitalize()
+#     departments = ["Marketing", "Accounting", "Finops"]
+#     # departments = ["Marketing", "Accounting", "Finops"]
+#     match = departments.index(chosen_department)
+    
+#     if chosen_department in departments:
+#         while count < (number_of_ec2_instance):
+#             special_name = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(9))
+#             count += 1
+#             list.append({special_name, chosen_department})
+#     else:
+#         print("nope this is wrong")
+#     print(list)
+    
     
 
 
+# # build_ec2_instance(2, "finops")
+# build_ec2_instance(5, "wejfoiwejfoajfj")
+# build_ec2_instance(9, "Marketing")
 
 # for department in departments:
 #     print(department)
